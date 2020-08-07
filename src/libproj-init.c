@@ -7,10 +7,14 @@
 SEXP libproj_proj_version();
 // defined in libprojmds-trans_xy.c
 SEXP libprojmds_proj_trans_xy(SEXP, SEXP, SEXP, SEXP);
+// defined in libprojmds-proj-create.c
+SEXP libprojmds_proj_create(SEXP, SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
   {"libproj_proj_version", (DL_FUNC) &libproj_proj_version, 0},
   {"libprojmds_proj_trans_xy", (DL_FUNC) &libprojmds_proj_trans_xy, 4},
+  {"libprojmds_proj_create", (DL_FUNC) &libprojmds_proj_create, 2},
+
   {NULL, NULL, 0}
 };
 
